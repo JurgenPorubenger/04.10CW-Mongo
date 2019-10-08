@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action='/api/register', method='POST')
+    input(type='text', name='username', value='')
+    input(type='text', name='email', value='')
+    input(type='text', name='pwd', value='')
+    input(type='submit', value='Submit')
+  form(action='/api/login', method='POST')
+    input(type='text', name='username', value='')
+    input(type='text', name='pwd', value='')
+    input(type='submit', value='Submit')
