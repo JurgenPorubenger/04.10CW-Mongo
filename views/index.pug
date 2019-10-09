@@ -1,14 +1,30 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  form(action='/api/register', method='POST')
-    input(type='text', name='username', value='')
-    input(type='text', name='email', value='')
-    input(type='text', name='pwd', value='')
-    input(type='submit', value='Submit')
-  form(action='/api/login', method='POST')
-    input(type='text', name='username', value='')
-    input(type='text', name='pwd', value='')
-    input(type='submit', value='Submit')
+  .register_form
+    h2 Registration
+    form(action='/api/register', method='POST')
+      input(type='text', name='username', placeholder='username')
+      input(type='text', name='email', placeholder='email')
+      input(type='text', name='pwd', placeholder='password')
+      input(type='submit', value='Submit')
+    h3= title
+  .login_form
+    h2 Login
+    form(action='/api/login', method='POST')
+      input(type='text', name='username', placeholder='username')
+      input(type='text', name='pwd', placeholder='password')
+      input(type='submit', value='Submit')
+  .update_form
+    h2 Update
+    form(action='/api/update', method='POST')
+      input(type='text', name='username', placeholder='username')
+      input(type='text', name='pwd', placeholder='password')
+      input(type='submit', value='Submit')
+  .delete_form
+    h2 Delete
+    form(action='/api/delete', method='POST')
+      input(type='text', name='username', placeholder='username')
+      input(type='text', name='email', placeholder='email')
+      input(type='text', name='pwd', placeholder='password')
+      input(type='submit', value='Submit')

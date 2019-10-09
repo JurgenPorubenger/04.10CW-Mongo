@@ -6,3 +6,6 @@ body {
 a {
   color: #00B7FF;
 }
+.register_form, .login_form , .update_form, .delete_form  {
+  margin: 50px;
+}
